@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/container_bg"
+    android:orientation="vertical"
+    tools:context=".fragments.UsersWithBalanceFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Users Profile"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                android:textColor="@color/white" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="40dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/profile"
+                    app:civ_border_color="#FF000000"
+                    app:civ_border_width="2dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:text="UID:"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/uid"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_weight="1"
+                        android:text="N\A"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="20dp"
+                app:cardCornerRadius="9dp"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/container_bg"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:orientation="horizontal">
+
+                    </LinearLayout>
+                    <!-- Name -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.7"
+                            android:text="Name:"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvName"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.3"
+                            android:text="N\A"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+                    <!-- Email -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.7"
+                            android:text="Email:"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvEmail"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.3"
+                            android:text="N\A"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.7"
+                            android:text="Password"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvPassword"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.3"
+                            android:text="N\A"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+                    <!-- Phone -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.7"
+                            android:text="Phone:"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvPhone"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.3"
+                            android:text="N\A"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+                    <!-- Status -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.7"
+                            android:text="Deposit:"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvDeposit"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.3"
+                            android:text="N\A"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+                    <!-- Status -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.7"
+                            android:text="Profit:"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvProfit"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.3"
+                            android:text="N\A"
+                            android:textColor="@color/white" />
+
+                    </LinearLayout>
+                    <!-- CNIC -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="25dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.7"
+                            android:text="Referral Code:"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvReferral"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.3"
+                            android:text="N\A"
+                            android:textColor="@color/white" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="vertical"-->
+    <!--android:visibility="gone"-->
+    <!--    >-->
+
+    <!--<TextView-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="wrap_content"-->
+    <!--    android:text="Users with Balance"-->
+    <!--    android:textColor="@color/white"-->
+    <!--    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"-->
+    <!--    android:textAlignment="center"-->
+    <!--    android:layout_marginTop="8dp" />-->
+
+    <!--&lt;!&ndash; Name &ndash;&gt;-->
+    <!--<TextView-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="wrap_content"-->
+    <!--    android:text="Name"-->
+    <!--    android:textColor="@color/white"-->
+    <!--    android:textSize="12sp"-->
+    <!--    android:layout_marginTop="48dp" />-->
+
+    <!--<EditText-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="wrap_content"-->
+    <!--    android:hint="Enter User Name"-->
+    <!--    android:background="@drawable/edittext_bg"-->
+    <!--    android:textSize="14sp"-->
+    <!--    android:textColor="@color/white"-->
+    <!--    android:textColorHint="#9E9E9E"-->
+    <!--    android:layout_marginTop="4dp"-->
+    <!--    />-->
+
+    <!--&lt;!&ndash; User ID &ndash;&gt;-->
+    <!--<TextView-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="wrap_content"-->
+    <!--    android:text="User ID"-->
+    <!--    android:textColor="@color/white"-->
+    <!--    android:textSize="12sp"-->
+    <!--    android:layout_marginTop="12dp" />-->
+
+    <!--<EditText-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="wrap_content"-->
+    <!--    android:hint="Enter User ID"-->
+    <!--    android:background="@drawable/edittext_bg"-->
+    <!--    android:textSize="14sp"-->
+    <!--    android:textColor="@color/white"-->
+    <!--    android:textColorHint="#9E9E9E"-->
+    <!--    android:layout_marginTop="4dp" />-->
+
+    <!--&lt;!&ndash; Balance &ndash;&gt;-->
+    <!--<TextView-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="wrap_content"-->
+    <!--    android:text="Balance"-->
+    <!--    android:textColor="@color/white"-->
+    <!--    android:textSize="12sp"-->
+    <!--    android:layout_marginTop="12dp" />-->
+
+    <!--<EditText-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="wrap_content"-->
+    <!--    android:hint="Enter User Balance"-->
+    <!--    android:background="@drawable/edittext_bg"-->
+    <!--    android:textSize="14sp"-->
+    <!--    android:textColor="@color/white"-->
+    <!--    android:textColorHint="#9E9E9E"-->
+    <!--    android:layout_marginTop="4dp" />-->
+
+    <!--&lt;!&ndash; Sold Packages &ndash;&gt;-->
+    <!--<TextView-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="wrap_content"-->
+    <!--    android:text="Sold Packages"-->
+    <!--    android:textColor="@color/white"-->
+    <!--    android:textSize="12sp"-->
+    <!--    android:layout_marginTop="12dp" />-->
+
+    <!--<EditText-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="wrap_content"-->
+    <!--    android:hint="Enter Sold Packages"-->
+    <!--    android:background="@drawable/edittext_bg"-->
+    <!--    android:textSize="14sp"-->
+    <!--    android:textColor="@color/white"-->
+    <!--    android:textColorHint="#9E9E9E"-->
+    <!--    android:layout_marginTop="4dp" />-->
+
+    <!--&lt;!&ndash; Total Sales Generated &ndash;&gt;-->
+    <!--<TextView-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="wrap_content"-->
+    <!--    android:text="Total Sales Generated"-->
+    <!--    android:textColor="@color/white"-->
+    <!--    android:textSize="12sp"-->
+    <!--    android:layout_marginTop="12dp" />-->
+
+    <!--<EditText-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="wrap_content"-->
+    <!--    android:hint="Enter Total Sales Generated"-->
+    <!--    android:background="@drawable/edittext_bg"-->
+    <!--    android:textSize="14sp"-->
+    <!--    android:textColor="@color/white"-->
+    <!--    android:textColorHint="#9E9E9E"-->
+    <!--    android:layout_marginTop="4dp" />-->
+
+    <!--&lt;!&ndash; Confirm Button &ndash;&gt;-->
+    <!--<androidx.appcompat.widget.AppCompatButton-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="50dp"-->
+    <!--    android:text="Confirm"-->
+    <!--    android:textColor="#FFFFFF"-->
+    <!--    android:textStyle="bold"-->
+    <!--    android:layout_marginTop="24dp"-->
+    <!--    android:background="@drawable/green_btn_bg"-->
+    <!--    android:textAllCaps="false"-->
+    <!--    />-->
+    <!--</LinearLayout>-->
+
+

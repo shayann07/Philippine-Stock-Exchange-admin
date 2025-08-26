@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottomSheetContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottomsheet_bg">
+
+    <!-- Top Content -->
+    <RelativeLayout
+        android:id="@+id/layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp">
+
+        <!-- Back Arrow -->
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:contentDescription="Back"
+            android:src="@drawable/arrow_back"
+            android:visibility="gone"
+            app:tint="@color/white" />
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnBack"
+            android:layout_marginTop="16dp"
+            android:text="Edit Deposit"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!-- Symbol -->
+        <TextView
+            android:id="@+id/tvSymbol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvTitle"
+            android:layout_marginTop="4dp"
+            android:text="TSLA"
+            android:textColor="#AAAAAA"
+            android:textSize="14sp" />
+
+        <!-- Stock Type -->
+        <TextView
+            android:id="@+id/tvStockType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvSymbol"
+            android:layout_marginTop="16dp"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+
+        <EditText
+            android:id="@+id/deposit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/edittext_bg"
+            android:hint="Deposit"
+            android:inputType="textEmailAddress"
+            android:layout_below="@id/tvStockType"
+            android:textColor="@android:color/white"
+            android:textColorHint="#B0B0B0"
+            android:textSize="14sp"
+            />
+        <EditText
+            android:id="@+id/announcementMessage"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/edittext_bg"
+            android:hint="Announcement"
+            android:gravity="start"
+            android:inputType="textEmailAddress"
+            android:layout_below="@id/deposit"
+            android:textColor="@android:color/white"
+            android:textColorHint="#B0B0B0"
+            android:textSize="14sp"
+            android:visibility="gone"
+            />
+
+        <!-- Login Button -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/updateButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/green_btn_bg"
+            android:layout_below="@id/announcementMessage"
+            android:text="Update"
+            android:textAllCaps="false"
+            android:layout_marginTop="8dp"
+            android:textColor="@android:color/white" />
+    </RelativeLayout>
+
+</RelativeLayout>

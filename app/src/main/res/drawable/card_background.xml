@@ -1,0 +1,5 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="#CC1C1C2D" /> <!-- semi-transparent dark blur look -->
+    <corners android:radius="20dp" />
+</shape>

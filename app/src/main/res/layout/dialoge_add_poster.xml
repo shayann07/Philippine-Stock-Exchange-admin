@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/bottomsheet_bg"
+    android:padding="16dp">
+
+    <!-- Preview: shows the picked image if any -->
+    <ImageView
+        android:id="@+id/previewImageView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/edittext_bg"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/preview_image" />
+
+    <!-- Button to pick from gallery -->
+    <Button
+        android:id="@+id/selectImageBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:backgroundTint="@null"
+        android:background="@drawable/green_btn_bg"
+        android:text="Select Image" />
+
+    <!-- Upload button: initially disabled until an image is chosen -->
+    <Button
+        android:id="@+id/uploadImageBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:enabled="true"
+        app:backgroundTint="@null"
+        android:background="@drawable/green_btn_bg"
+        android:text="Upload " />
+
+    <!-- Progress bar for showing upload progress -->
+    <ProgressBar
+        android:id="@+id/uploadProgressBar"
+        style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:visibility="gone"
+        android:max="100" />
+
+</LinearLayout>

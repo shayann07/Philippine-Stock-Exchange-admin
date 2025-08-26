@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="background_dark">#000000</color>
+    <color name="yellow_primary">#FFFF00</color>
+    <color name="text_white">#FFFFFF</color>
+    <color name="text_hint">#888888</color>
+    <color name="input_background">#1A1A1A</color>
+
+    <color name="green">#174D38</color>
+    <color name="red">#3A201D</color>
+    <color name="skyblue">#4AC3FF</color>
+    <color name="progress_blue">#1E88E5</color>
+
+
+    <color name="green_two">#00C49F</color>
+    <color name="red_two">#FF4C61</color>
+    <color name="blue">#1C64F2</color>
+    <color name="bg_card">#3C6BBC</color>
+    <color name="status_bar">#044A99</color>
+</resources>

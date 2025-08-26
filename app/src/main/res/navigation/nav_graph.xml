@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.codingempire.adminpse.fragments.HomeFragment"
+        android:label="HomeFragment">
+        <action
+            android:id="@+id/action_homeFragment_to_activeUsersFragment"
+            app:destination="@id/activeUsersFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_fragmnetUser"
+            app:destination="@id/fragmnetUser" />
+        <action
+            android:id="@+id/action_homeFragment_to_plansByCategoryFragment"
+            app:destination="@id/plansByCategoryFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_planDetailFragment"
+            app:destination="@id/planDetailFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_withdrawalRequestsFragment"
+            app:destination="@id/withdrawalRequestsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_chatFragment"
+            app:destination="@id/chatFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_planSettingFragment"
+            app:destination="@id/planSettingFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_announcementsFragment"
+            app:destination="@id/announcementsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_notificationFragment"
+            app:destination="@id/notificationFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_createUserFragment"
+            app:destination="@id/createUserFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_addPosterFragment"
+            app:destination="@id/addPosterFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_addPosterFragment2"
+            app:destination="@id/addPosterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/activeUsersFragment"
+        android:name="com.codingempire.adminpse.fragments.ActiveUsersFragment"
+        android:label="fragment_active_users"
+        tools:layout="@layout/fragment_active_users" />
+    <fragment
+        android:id="@+id/usersWithBalanceFragment"
+        android:name="com.codingempire.adminpse.fragments.UsersWithBalanceFragment"
+        android:label="fragment_users_with_balance"
+        tools:layout="@layout/fragment_users_with_balance" />
+
+    <fragment
+        android:id="@+id/planDetailFragment"
+        android:name="com.codingempire.adminpse.fragments.investment_plans.PlanDetailFragment"
+        android:label="PlanDetailFragment" />
+
+    <fragment
+        android:id="@+id/fragmnetUser"
+        android:name="com.codingempire.adminpse.fragments.FragmentUser"
+        android:label="FragmnetUser">
+        <action
+            android:id="@+id/action_fragmnetUser_to_usersWithBalanceFragment"
+            app:destination="@id/usersWithBalanceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/plansByCategoryFragment"
+        android:name="com.codingempire.adminpse.fragments.investment_plans.PlansByCategoryFragment"
+        android:label="fragment_plans_by_category"
+        tools:layout="@layout/fragment_plans_by_category">
+        <action
+            android:id="@+id/action_plansByCategoryFragment_to_planDetailFragment"
+            app:destination="@id/planDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/allWithdrawalsRequestFragment"
+        android:name="com.codingempire.adminpse.fragments.withdraw.AllWithdrawalsRequestFragment"
+        android:label="AllWithdrawalsRequestFragment" />
+    <fragment
+        android:id="@+id/approvedWithdrawalsFragment"
+        android:name="com.trustledger.adminaitrust.fragments.withdraw.ApprovedWithdrawalsFragment"
+        android:label="ApprovedWithdrawalsFragment" />
+    <fragment
+        android:id="@+id/rejectedWithdrawalsFragment"
+        android:name="com.codingempire.adminpse.fragments.withdraw.RejectedWithdrawalsFragment"
+        android:label="RejectedWithdrawalsFragment" />
+    <fragment
+        android:id="@+id/withdrawalRequestsFragment"
+        android:name="com.codingempire.adminpse.fragments.withdraw.WithdrawalRequestsFragment"
+        android:label="WithdrawalRequestsFragment">
+        <action
+            android:id="@+id/action_withdrawalRequestsFragment_to_rejectedWithdrawalsFragment"
+            app:destination="@id/rejectedWithdrawalsFragment" />
+        <action
+            android:id="@+id/action_withdrawalRequestsFragment_to_approvedWithdrawalsFragment"
+            app:destination="@id/approvedWithdrawalsFragment" />
+        <action
+            android:id="@+id/action_withdrawalRequestsFragment_to_allWithdrawalsRequestFragment"
+            app:destination="@id/allWithdrawalsRequestFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.codingempire.adminpse.fragments.chat.ChatFragment"
+        android:label="fragment_chat"
+        tools:layout="@layout/fragment_chat">
+        <action
+            android:id="@+id/action_chatFragment_to_detailChatFragment"
+            app:destination="@id/detailChatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailChatFragment"
+        android:name="com.codingempire.adminpse.fragments.chat.DetailChatFragment"
+        android:label="fragment_detail_chat"
+        tools:layout="@layout/fragment_detail_chat" />
+    <fragment
+        android:id="@+id/editPlanSettingFragment"
+        android:name="com.codingempire.adminpse.fragments.plan_setting.EditPlanSettingFragment"
+        android:label="fragment_edit_plan_setting"
+        tools:layout="@layout/fragment_edit_plan_setting" />
+    <fragment
+        android:id="@+id/planSettingFragment"
+        android:name="com.codingempire.adminpse.fragments.plan_setting.PlanSettingFragment"
+        android:label="fragment_plan_setting"
+        tools:layout="@layout/fragment_plan_setting">
+        <action
+            android:id="@+id/action_planSettingFragment_to_editPlanSettingFragment"
+            app:destination="@id/editPlanSettingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/announcementsFragment"
+        android:name="com.codingempire.adminpse.fragments.AnnouncementsFragment"
+        android:label="fragment_announcements"
+        tools:layout="@layout/fragment_announcements" />
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.codingempire.adminpse.fragments.NotificationFragment"
+        android:label="fragment_notification"
+        tools:layout="@layout/fragment_notification" />
+    <fragment
+        android:id="@+id/createUserFragment"
+        android:name="com.codingempire.adminpse.fragments.create_user.CreateUserFragment"
+        android:label="fragment_create_user"
+        tools:layout="@layout/fragment_create_user">
+        <action
+            android:id="@+id/action_createUserFragment_to_depositFragment"
+            app:destination="@id/depositFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/depositFragment"
+        android:name="com.codingempire.adminpse.fragments.create_user.DepositFragment"
+        android:label="fragment_deposit"
+        tools:layout="@layout/fragment_deposit">
+        <action
+            android:id="@+id/action_depositFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addPosterFragment"
+        android:name="com.codingempire.adminpse.fragments.AddPosterFragment"
+        android:label="fragment_add_poster"
+        tools:layout="@layout/fragment_add_poster" />
+</navigation>
