@@ -42,8 +42,8 @@ class HomeFragment : Fragment() {
     private lateinit var usersList: MutableList<User>
     private var firestore = FirebaseFirestore.getInstance()
     private var transactionsList = mutableListOf<TransactionModel>()
-    private val publicKey = "REDACTED_COINPAYMENTS_PUBLIC_KEY"
-    private val privateKey = "REDACTED_COINPAYMENTS_PRIVATE_KEY"
+    private val publicKey = "YOUR_COINPAYMENTS_PUBLIC_KEY"
+    private val privateKey = "YOUR_COINPAYMENTS_PRIVATE_KEY"
     private val apiUrl = "https://www.coinpayments.net/api.php"
 
     private val usersCollection = firestore.collection("users")
@@ -132,8 +132,8 @@ class HomeFragment : Fragment() {
 //            try {
 //                // 1. Create user in Firebase Auth
 //                val authResult = auth.createUserWithEmailAndPassword(
-//                    "REDACTED_EMAIL",
-//                    "REDACTED_PASS"
+//                    "admin@example.com",
+//                    "REDACTED_PASSWORD"
 //                ).await()
 //                val firebaseUid = authResult.user?.uid ?: throw Exception("No UID from Firebase Auth")
 //
@@ -147,13 +147,13 @@ class HomeFragment : Fragment() {
 //                    "createdAt" to Timestamp.now(),
 //                    "createdByAdmin" to true,
 //                    "lastName" to "Afridi",
-//                    "password" to "REDACTED_PASS", // WARNING: Never store plain passwords in production!
+//                    "password" to "REDACTED_PASSWORD", // WARNING: Never store plain passwords in production!
 //                    "phoneNumber" to "03000000027",
 //                    "docId" to userDocRef.id,
 //                    "referralCode" to "U5684",
 //                    "name" to "Feroz",
 //                    "isBlocked" to false,
-//                    "email" to "REDACTED_EMAIL",
+//                    "email" to "admin@example.com",
 //                    "status" to "inactive"
 //                )
 //                userDocRef.set(userData).await()
